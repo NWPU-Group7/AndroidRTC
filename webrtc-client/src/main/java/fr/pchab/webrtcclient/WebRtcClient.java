@@ -363,6 +363,7 @@ public class WebRtcClient {
         // iceServers.add(new PeerConnection.IceServer("stun:23.21.150.121"));
         // iceServers.add(new PeerConnection.IceServer("stun:39.106.185.26", "virtual", "talk"));
         iceServers.add(new PeerConnection.IceServer("stun:stun.internetcalls.com"));
+        iceServers.add( new PeerConnection.IceServer("turn:47.92.141.59:3478","jialu","ghl0219"));
         // iceServers.add(new PeerConnection.IceServer("stun:stun.l.google.com:19302"));
 
         pcConstraints.mandatory.add(new MediaConstraints.KeyValuePair("OfferToReceiveAudio", "true"));
