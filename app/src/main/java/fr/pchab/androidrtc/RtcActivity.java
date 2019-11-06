@@ -111,10 +111,9 @@ public class RtcActivity extends Activity implements WebRtcClient.RtcListener {
 
         final Intent intent = getIntent();
         final String action = intent.getAction();
-
         if (Intent.ACTION_VIEW.equals(action)) {
-            final List<String> segments = intent.getData().getPathSegments();
-            callerId = segments.get(0);
+            final String urlId =intent.getData().getQueryParameter("id");
+            callerId =urlId;
         }
         checkPermissions();
     }
